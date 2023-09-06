@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: #222;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #fff;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s ease-in;
+}
+
+.circle button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 70%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-50deg);
+}
+
+.content {
+    max-width: 1000px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #373232;
+    margin-bottom: 0;
+}
+
+.content small {
+    color: #766c6c;
+}
+
+.content p {
+    max-width: 810px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.content h3 {
+    font-size: 27px;
+    color: burlywood;
+}
+
+.content img {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    bottom: 25%;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px;
+    transform: translateX(-150%);
+    transition: transform 0.36s ease-in;
+}
+
+nav ul li+li {
+    margin-left: 15px;
+    transform: translateX(-200%);
+}
+
+nav ul li+li+li {
+    margin-left: 30px;
+    transform: translateX(-250%);
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
