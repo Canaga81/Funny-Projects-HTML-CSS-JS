@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 6px;
+}
+
+h1 {
+    color: red;
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-control {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #fff;
+}
+
+input:focus,
+input:valid {
+    outline: none;
+    border-bottom: 3px solid red;
+}
+
+label {
+    position: absolute;
+    top: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.red-btn {
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.36s ease-in;
+}
+
+.red-btn:hover {
+    background-color: rgb(156, 28, 28);
+}
+
+.text {
+    color: yellowgreen;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.text a {
+    color: blue;
+    text-decoration: none;
+    font-size: 10px;
+    transition: all 0.126s ease-in;
+}
+
+.text a:hover {
+    opacity: 0.5;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 10px;
+    min-width: 5px;
+    transition: 0.36s cubic-bezier(0.7, -0.6, 0.3, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: green;
+    transform: translateY(-20px);
+}
