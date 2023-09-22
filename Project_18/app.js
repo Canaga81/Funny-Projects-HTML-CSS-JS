@@ -1,6 +1,11 @@
 const newToDoInput = document.getElementById( 'newToDo' );
 const addTodoBtn = document.getElementById( 'addTodo' );
-const todoContainer = document.querySelector( '.todo-container' );
+const clearAllBtn = document.getElementById( 'clearAllBtn' );
+const todoContent = document.querySelector( '.todo-content' );
+
+clearAllBtn.onclick = () => {
+    todoContent.innerHTML = '';
+}
 
 addTodoBtn.onclick = () => {
 
@@ -28,7 +33,7 @@ addTodoBtn.onclick = () => {
         }
 
         todo.append( h4, removeBtn, editBtn );
-        todoContainer.appendChild( todo );
+        todoContent.appendChild( todo );
         newToDoInput.value = '';
 
     }
