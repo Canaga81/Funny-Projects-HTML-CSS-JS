@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.todo-container {
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+input {
+    font-size: 32px;
+    outline: none;
+}
+
+.todo {
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.input-container button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.36s linear;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+.todo button {
+    float: right;
+    margin-top: -20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
