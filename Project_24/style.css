@@ -1,0 +1,39 @@
+.cardFront,
+.cardBack {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
+.card-number {
+    position: absolute;
+    top: 132px;
+    padding-left: 30px;
+    font-size: 30px;
+    font-family: monospace;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.cardHolderNameAndExpDate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -50px;
+    padding: 0 30px;
+    color: #fff;
+}
+
+.cvc {
+    position: absolute;
+    top: 111px;
+    right: 60px;
+    letter-spacing: 3px;
+    color: #605d5d;
+    font-weight: 500;
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+    display: none;
+}
