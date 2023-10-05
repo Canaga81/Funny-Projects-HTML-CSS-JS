@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: #ccc;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#title {
+    font-size: 54px;
+    color: #fff;
+    background-color: red;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.inputText {
+    width: 300px;
+    height: 46px;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+}
+
+.inputText[type="text"] {
+    background-color: black;
+    user-select: none;
+}
+
+.addTodo {
+    padding: 0.9rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    background-color: chartreuse;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.addTodo:active {
+    color: chartreuse;
+    background-color: #fff;
+}
+
+.clearTodo {
+    padding: 0.9rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    background-color: red;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.clearTodo:active {
+    color: red;
+    background-color: #fff;
+}
+
+.list-styling {
+    text-align: center;
+    text-transform: capitalize;
+    color: cadetblue;
+    font-size: 30px;
+    user-select: none;
+}
+
+.to-dos {
+    /* gap: 15px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-style {
+    color: red;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
