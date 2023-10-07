@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.darkMode,
+.darkMode * {
+    background-color: #000;
+    color: #fff;
+}
+
+#root {
+    height: 100vh;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 25px;
+    border: 1px solid black;
+}
