@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--! Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--! Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--! Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--! Link Css -->
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Shopping Card</title>
+</head>
+
+<body>
+
+    <!--! Header Start -->
+
+    <header class="container">
+
+        <nav class="navbar navbar-expend-lg navbar-dark bg-primary">
+
+            <div class="container">
+
+                <div class="content-left">
+
+                    <a href="#" class="navbar-brand">Logo</a>
+                    <a href="#" class="nav-link home">Home</a>
+
+                </div>
+
+                <div class="shopping-cart position-relative">
+
+                    <button type="button" class="btn-cart btn btn-primary position-relative">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="item-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
+
+                    </button>
+
+                    <div class="shopping-cart-list bg-primary d-none">
+
+                        <b class="fs-5 text-white my-3">Shopping Cart</b>
+
+                        <!-- <div class="list-item">
+
+                            <div class="row align-items-center text-white-50">
+
+                                <div class="col-md-3">
+                                    <img src="images/img1.jpg" alt="product" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="title">Kulaklik</div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="price">$ 15</div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <button class="btn btn-delete">
+                                        <i class="fas fa-trash-alt text-danger"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--! Header End -->
+
+    <!--! Section Cards Start -->
+
+    <section class="products mt-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/img1.jpg" alt="product" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Kulaklik</h5>
+                            <p class="cart-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad magnam
+                                minus praesentium repellat quam velit in quasi distinctio labore?
+                            </p>
+
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-info text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+
+                                <span class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$ 66</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/img2.jpg" alt="product" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayakkabi</h5>
+                            <p class="cart-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad magnam
+                                minus praesentium repellat quam velit in quasi distinctio labore?
+                            </p>
+
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-info text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+
+                                <span class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$ 25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/img3.jpeg" alt="product" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Topuklu Ayakkabi</h5>
+                            <p class="cart-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad magnam
+                                minus praesentium repellat quam velit in quasi distinctio labore?
+                            </p>
+
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-info text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+
+                                <span class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$ 42</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card">
+                        <img src="images/img4.jpeg" alt="product" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Oyuncak Araba</h5>
+                            <p class="cart-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad magnam
+                                minus praesentium repellat quam velit in quasi distinctio labore?
+                            </p>
+
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-info text-white" href="#"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+
+                                <span class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$ 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--! Section Cards End -->
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
