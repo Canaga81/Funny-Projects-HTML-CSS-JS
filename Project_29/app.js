@@ -12,11 +12,12 @@ function Read () {
     if ( getUserList != null ) {
 
         if ( getUserList.length === 0 ) {
-            nameListDom.innerHTML = "There are any no users";
+            nameListDom.innerHTML = "Siyahida hec kesin adi yoxdur ! (Ad Elave Edin !)";
         }
         else {
 
             for ( let i = 0; i < getUserList.length; i++ ) {
+
                 nameListDom.innerHTML += `
                     <div class="user-item">
 
@@ -38,9 +39,10 @@ function Read () {
                             </button>
 
                         </div>
-                    
+
                     </div>
                 `;
+
             }
 
         }
@@ -52,25 +54,21 @@ function Read () {
 function Create () {
 
     const storage = JSON.parse( localStorage.getItem( "userList" ) );
-    let inputText = document.getElementById( "name" ).value;
+    let inputTextValue = document.getElementById( 'name' ).value;
 
-    if ( inputText.trim() == "" ) {
-        alert( "Write a name" );
+    if ( inputTextValue.trim() === "" ) {
+        alert( "Bura Bos Biraxila Bilmez !" );
     }
     else {
 
         if ( storage === null ) {
-
-            userList.push( inputText );
+            userList.push( inputTextValue );
             localStorage.setItem( "userList", JSON.stringify( userList ) );
-
         }
         else {
-
             userList = JSON.parse( localStorage.getItem( "userList" ) );
-            userList.push( inputText );
+            userList.push( inputTextValue );
             localStorage.setItem( "userList", JSON.stringify( userList ) );
-
         }
 
     }
@@ -93,16 +91,20 @@ function Edit ( item ) {
     nameListDom.innerHTML = "";
 
     for ( let i = 0; i < editUsers.length; i++ ) {
+
         if ( i === item ) {
             nameListDom.innerHTML += `
                 <div class="user-item">
 
                     <div>
+
                         <p>
                             <i class="fas fa-user"></i>
                             <span>User :</span> ${ editUsers[i] }
                         </p>
+
                         <input autocomplete="off" type="text" placeholder="${ editUsers[i] }" id="newName">
+
                     </div>
 
                     <div class="buttons">
@@ -124,30 +126,31 @@ function Edit ( item ) {
         }
         else {
             nameListDom.innerHTML += `
-                    <div class="user-item">
+                <div class="user-item">
 
-                        <p>
-                            <i class="fas fa-user"></i>
-                            <span>User :</span> ${ getUserList[i] }
-                        </p>
+                    <p>
+                        <i class="fas fa-user"></i>
+                        <span>User :</span> ${ getUserList[i] }
+                    </p>
 
-                        <div class="buttons">
+                    <div class="buttons">
 
-                            <button class="primary" onclick="Edit(${ i })">
-                                <i class="fas fa-edit"></i>
-                                Edit
-                            </button>
+                        <button class="primary" onclick="Edit(${ i })">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
 
-                            <button class="danger" onclick="Delete(${ i })">
-                                <i class="fas fa-trash"></i>
-                                Delete
-                            </button>
+                        <button class="danger" onclick="Delete(${ i })">
+                            <i class="fas fa-trash"></i>
+                            Delete
+                        </button>
 
-                        </div>
-                    
                     </div>
-                `;
+
+                </div>
+            `;
         }
+
     }
 
 }
@@ -158,7 +161,7 @@ function Update ( item ) {
     updateUsers[item] = document.getElementById( 'newName' ).value;
 
     if ( updateUsers[item] === "" ) {
-        alert( "Write a new Name" );
+        alert( "Bura bos biraxila bilmez !" );
     }
     else {
         localStorage.setItem( "userList", JSON.stringify( updateUsers ) );
@@ -168,11 +171,14 @@ function Update ( item ) {
 }
 
 const formEl = document.getElementById( 'form' );
-formEl.addEventListener( "submit", ( e ) => {
+
+formEl.addEventListener( 'submit', ( e ) => {
+
     e.preventDefault();
     Create();
     Read();
     formEl.reset();
+
 } );
 
 document.addEventListener( "DOMContentLoaded", () => {
