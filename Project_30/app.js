@@ -1,19 +1,29 @@
+//! Card ve Button'lar Ustediki acilan card,button ve asagidaki card, button
+
 const card = document.getElementsByClassName( 'card' );
 const btnAdd = document.getElementsByClassName( 'btn-info' );
 const btnCart = document.querySelector( '.btn-cart' );
 const cartList = document.querySelector( '.shopping-cart-list' );
 
+// Card'in icindeki image, title ve price(qiymeti) 
+
 class Shopping {
 
     constructor( image, title, price ) {
+
         this.image = image;
         this.title = title;
         this.price = price;
+
     }
 
 }
 
+//! Gorulen Hisse'nin hamisi
+
 class UI {
+
+    //? Yuxaridaki Carda elave etmek ucun yazdigimiz function
 
     addToCart ( shopping ) {
 
@@ -48,60 +58,68 @@ class UI {
 
     }
 
+    //? Yuxaridaki Cardi silmek ucun yazdigimiz function
+
     removeCart () {
 
         let btnRemove = document.getElementsByClassName( 'btn-delete' );
         let self = this;
 
-        console.log( btnRemove );
-
         for ( let i = 0; i < btnRemove.length; i++ ) {
 
-            btnRemove[i].addEventListener( "click", function () {
+            btnRemove[i].addEventListener( 'click', function() {
 
                 this.parentElement.parentElement.parentElement.remove();
-                self.cartCount();
-                
+                self.cartCount(); //! Yuxaridaki cardlarin sayi azalanda burdanda silmesi ucun yazilan code
+
             } );
 
         }
 
     }
 
-    cartCount () {
+    //? Yuxaridaki Card'larin sayisin gosteren function
 
+    cartCount () {
+        
         let cartListItem = cartList.getElementsByClassName( 'list-item' );
         let itemCount = document.getElementById( 'item-count' );
-        itemCount.innerHTML = cartListItem.length;
+        itemCount.innerHTML = cartListItem.length; //! Burdaki -"cartListItem.length"- card'larin sayini bildirir
 
     }
+
+    //? Yuxaridaki Cardi acib-baglamak ucun yazilan function
 
     cartToggle () {
 
         btnCart.addEventListener( 'click', () => {
-
+    
             cartList.classList.toggle( 'd-none' );
-
+    
         } );
-
+    
     }
 
 }
 
+//! Card'in icindeki image, title ve price'i cixarmaq ucun yazilan for dongusu 
+
 for ( let i = 0; i < card.length; i++ ) {
 
-    btnAdd[i].addEventListener( 'click', ( e ) => {
+    btnAdd[i].addEventListener( "click", ( e ) => {
 
         let title = card[i].getElementsByClassName( 'card-title' )[0].textContent;
         let price = card[i].getElementsByClassName( 'price' )[0].textContent;
         let image = card[i].getElementsByClassName( 'card-img-top' )[0].src;
 
-        btnAdd[i].classList.add( "disabled" );
+        btnAdd[i].classList.add( 'disabled' );
         btnAdd[i].textContent = "In Card";
+
+        //! Burda olan image, title ve price'lari UI'a menimsetmek ucun yazdigimiz code
 
         let shopping = new Shopping( image, title, price );
 
-        let ui = new UI();
+        let ui = new UI;
 
         ui.addToCart( shopping );
         ui.removeCart();
@@ -116,9 +134,8 @@ for ( let i = 0; i < card.length; i++ ) {
 //! Toggle
 
 document.addEventListener( "DOMContentLoaded", () => {
-
+    
     let ui = new UI;
-
     ui.cartToggle();
 
 } );
